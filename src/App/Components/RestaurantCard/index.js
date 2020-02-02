@@ -1,17 +1,18 @@
 import React from 'react'
 import {withRouter} from "react-router-dom";
 
-import {Image, Restaurant} from "./Styles";
+import {Image, Restaurant, RestaurantName} from "./Styles";
 
-const RestaurantCard = ({restaurant, index, history}) => {
-    console.log(restaurant);
+const RestaurantCard = ({restaurant, history}) => {
+
     return(
         <Restaurant
-            key={index}
             onClick={() => history.push(`/${restaurant.name}`)}
         >
             <Image src={restaurant.image} alt={`${restaurant.name} image`}/>
-            {restaurant.name}
+            <RestaurantName>
+                {restaurant.name}
+            </RestaurantName>
         </Restaurant>
     )
 };

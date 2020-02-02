@@ -9,6 +9,14 @@ export const color = {
     siteBG3: Color('#fff').darken(0.3).string(),
 };
 
+export const font = {
+    title: css`
+        font-family: 'Roboto', sans-serif;
+        font-size:36px;
+        letter-spacing: 2px;
+    `
+};
+
 export const layout = {
     row: css`
         display: flex;

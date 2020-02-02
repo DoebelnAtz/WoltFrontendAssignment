@@ -1,10 +1,12 @@
 import Styled from 'styled-components';
 import { color } from "../../utils";
 
-export const Restaurant = Styled.div`
-    margin: 10px 0;
-    color: ${color.primary};
-    background-color: ${color.siteBG1}; 
-    padding: 10px;
-    border-radius 4px;
+export const Home = Styled.div`
+    height: 100%;
+    width: 100%;
+`;
+
+export const RestaurantList = Styled.div`
+    width: 40vw;
+    margin: 2vh auto;
 `;

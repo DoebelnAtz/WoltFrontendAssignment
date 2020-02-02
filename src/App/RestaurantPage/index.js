@@ -1,12 +1,14 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import ReactDOM from 'react-dom'
-import {Outside, RestaurantModal} from "./Styles";
-import {useDismiss} from "../../Hooks";
+
+import { Outside, RestaurantModal } from "./Styles";
+import { useDismiss, useRequest } from "../../Hooks";
 
 function RestaurantPage(props) {
 
     const modal = useRef();
 
+    const [restaurant, setRestaurant, isLoading] = useRequest(props.match.params.restaurantName);
     const close = () => {
         props.history.push('/')
     };
@@ -16,8 +18,9 @@ function RestaurantPage(props) {
     return ReactDOM.createPortal(
         <Outside>
             <RestaurantModal ref={modal}>
-            <button onClick={close}>GO BACK</button>
-            {props.match.params.restaurantName}
+                {!isLoading &&
+                    restaurant.name
+                }
             </RestaurantModal>
         </Outside>,
         document.querySelector('#modal')
