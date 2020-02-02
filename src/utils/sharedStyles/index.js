@@ -12,7 +12,7 @@ export const color = {
 export const font = {
     title: css`
         font-family: 'Roboto', sans-serif;
-        font-size:36px;
+        font-size: 3vw;
         letter-spacing: 2px;
     `
 };

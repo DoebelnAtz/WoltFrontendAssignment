@@ -38,7 +38,7 @@ export const useRequest = (url) => {
             try {
                 setIsLoading(true);
                 resp = await makeRequest(url);
-                setData(resp);
+                setData(resp.restaurants);
             } finally {
                 setIsLoading(false)
             }

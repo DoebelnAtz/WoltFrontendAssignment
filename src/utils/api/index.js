@@ -3,7 +3,7 @@ import {sleep} from '../helpers'
 const data = require('../restaurants');
 
 const getByName = async (name) => {
-    return data.restaurants.find(restaurant => restaurant.name === name)
+    return {restaurants: data.restaurants.find(restaurant => restaurant.name === name)}
 };
 
 const makeRequest = async (url) => {
@@ -13,7 +13,7 @@ const makeRequest = async (url) => {
         case('/'):
             return data;
         default:
-            return getByName(url) // TODO: add get by restaurant name
+            return getByName(url)
 
     }
 };
