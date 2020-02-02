@@ -1,0 +1,2 @@
+export { color } from "./sharedStyles";
+
