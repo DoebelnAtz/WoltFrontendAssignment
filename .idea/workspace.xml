@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce34d5a-dfd8-4816-9294-57614d808a6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/blurhash/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/sort/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/HomePage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/HomePage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hooks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hooks/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/sharedStyles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/sharedStyles/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/RestaurantPage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/RestaurantPage/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +86,30 @@
       <option name="presentableId" value="Default" />
       <updated>1580561697228</updated>
       <workItem from="1580561698618" duration="8339000" />
-      <workItem from="1580667663523" duration="16364000" />
+      <workItem from="1580667663523" duration="17544000" />
     </task>
+    <task id="LOCAL-00001" summary="Added quicksorting algorithm">
+      <created>1580686757902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580686757902</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added quicksorting algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added quicksorting algorithm" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="5018" y="296" width="811" height="801" key="CommitChangelistDialog2" timestamp="1580686757835">
+      <screen x="3840" y="0" width="2560" height="1440" />
+    </state>
+    <state x="5018" y="296" width="811" height="801" key="CommitChangelistDialog2/3840.0.2560.1440/0.0.3840.1400@3840.0.2560.1440" timestamp="1580686757835" />
     <state width="1237" height="393" key="GridCell.Tab.0.bottom" timestamp="1580674048021">
       <screen x="3840" y="0" width="2560" height="1440" />
     </state>
@@ -115,6 +126,10 @@
       <screen x="3840" y="0" width="2560" height="1440" />
     </state>
     <state width="1237" height="393" key="GridCell.Tab.0.right/3840.0.2560.1440/0.0.3840.1400@3840.0.2560.1440" timestamp="1580674048021" />
+    <state x="5023" y="435" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1580686759058">
+      <screen x="3840" y="0" width="2560" height="1440" />
+    </state>
+    <state x="5023" y="435" width="800" height="523" key="Vcs.Push.Dialog.v2/3840.0.2560.1440/0.0.3840.1400@3840.0.2560.1440" timestamp="1580686759058" />
     <state x="5619" y="619" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580682188228">
       <screen x="3840" y="0" width="2560" height="1440" />
     </state>

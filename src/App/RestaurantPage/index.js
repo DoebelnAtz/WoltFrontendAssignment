@@ -17,7 +17,7 @@ function RestaurantPage(props) {
 
     return ReactDOM.createPortal(
         <Outside>
-            <RestaurantModal ref={modal}>
+            <RestaurantModal style={{background: "url(" + restaurant.image + ")", backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} ref={modal}>
                 {!isLoading &&
                     restaurant.name
                 }
