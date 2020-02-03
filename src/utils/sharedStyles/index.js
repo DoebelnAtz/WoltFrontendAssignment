@@ -1,4 +1,4 @@
-import Styled, { css } from 'styled-components';
+import { css } from 'styled-components';
 import Color from 'color';
 
 export const color = {
@@ -14,7 +14,11 @@ export const font = {
         font-family: 'Roboto', sans-serif;
         font-size: 3vw;
         letter-spacing: 2px;
-    `
+    `,
+    default: css`
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+    `,
 };
 
 export const layout = {
@@ -34,6 +38,20 @@ export const cursor = {
       cursor: pointer;
       user-select: none;
     `,
+};
 
+export const colorAdjust = {
+    darken: (color, amount) =>
+        Color(color)
+            .darken(amount)
+            .string(),
+    lighten: (color, amount) =>
+        Color(color)
+            .lighten(amount)
+            .string(),
+    rgba: (color, opacity) =>
+        Color(color)
+            .alpha(opacity)
+            .string()
 };
 

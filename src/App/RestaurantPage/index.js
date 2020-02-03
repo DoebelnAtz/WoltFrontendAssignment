@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import ReactDOM from 'react-dom'
 
-import { Outside, RestaurantModal } from "./Styles";
+import {Outside, RestaurantModal, RestaurantTitle} from "./Styles";
 import { useDismiss, useRequest } from "../../Hooks";
+import {Image} from "../Components/RestaurantCard/Styles";
 
 function RestaurantPage(props) {
 
@@ -17,9 +18,12 @@ function RestaurantPage(props) {
 
     return ReactDOM.createPortal(
         <Outside>
-            <RestaurantModal style={{background: "url(" + restaurant.image + ")", backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}} ref={modal}>
+            <RestaurantModal ref={modal}>
+                <Image src={restaurant.image} alt={`${isLoading ? 'restaurant' : restaurant.name}_image`}/>
+
+
                 {!isLoading &&
-                    restaurant.name
+                <RestaurantTitle>{restaurant.name}</RestaurantTitle>
                 }
             </RestaurantModal>
         </Outside>,

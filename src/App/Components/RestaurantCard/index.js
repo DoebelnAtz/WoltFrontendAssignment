@@ -1,9 +1,21 @@
 import React from 'react'
 import {withRouter} from "react-router-dom";
 
-import {Image, Restaurant, RestaurantName} from "./Styles";
+import {Image, Restaurant, RestaurantDescription, RestaurantName, Tag} from "./Styles";
 
 const RestaurantCard = ({restaurant, history}) => {
+
+    const renderTags = () => {
+        return (
+            restaurant.tags.map((tag, index) => {
+                return (
+                    <Tag key={index}>
+                        # {tag}
+                    </Tag>
+                )
+            })
+        )
+    };
 
     return(
         <Restaurant
@@ -13,6 +25,10 @@ const RestaurantCard = ({restaurant, history}) => {
             <RestaurantName>
                 {restaurant.name}
             </RestaurantName>
+            <RestaurantDescription>
+                {restaurant.description}
+            </RestaurantDescription>
+            {renderTags()}
         </Restaurant>
     )
 };

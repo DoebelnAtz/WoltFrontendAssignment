@@ -1,17 +1,18 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 
 import { useRequest } from "../../Hooks";
 import RestaurantCard from "../Components/RestaurantCard";
 import {Home, RestaurantList} from "./Styles";
-import quicksort from "../../utils/sort";
+import sort from "../../utils/sort";
+import SortDropDown from "../Components/SortButton";
 
 function HomePage() {
     const [restaurants, setRestaurants, isLoading] = useRequest('/');
     const [sortField, setSortField] = useState('name');
 
     useEffect(() => {
-        !isLoading && setRestaurants(quicksort([...restaurants], 0, restaurants.length-1, sortField));
-    }, [isLoading]);
+        !isLoading && setRestaurants(sort([...restaurants], sortField)); // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isLoading, sortField]);
 
     const renderRestaurants = () => {
         return (
@@ -27,6 +28,7 @@ function HomePage() {
 
     return (
         <Home>
+            <SortDropDown sortField={sortField} setSortField={setSortField}/>
             <RestaurantList>
                 {!isLoading && renderRestaurants()}
             </RestaurantList>

@@ -1,5 +1,5 @@
 import Styled from 'styled-components'
-import {color, layout} from "../../utils/sharedStyles";
+import { color, font } from "../../utils/sharedStyles";
 
 export const Outside = Styled.div`
     position: fixed;
@@ -19,9 +19,13 @@ export const RestaurantModal = Styled.div`
     right: 20%;
     top: 25%;
     bottom: 25%;
-    border: 5px solid ${color.siteBG1};
+    border: 3px solid ${color.siteBG1};
     background-color: ${color.siteBG};
-    border-radius: 2px;
+    border-radius: 4px;
     margin: auto;
-    
+`;
+
+export const RestaurantTitle = Styled.div`
+    color: ${color.primary};
+    ${font.title};    
 `;

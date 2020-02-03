@@ -8,13 +8,12 @@ const getByName = async (name) => {
 
 const makeRequest = async (url) => {
 
-    await sleep(300); // simulating a request
+    await sleep(200); // simulating a request
     switch (url) {
         case('/'):
             return data;
         default:
             return getByName(url)
-
     }
 };
 

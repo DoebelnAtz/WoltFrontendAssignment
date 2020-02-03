@@ -1,5 +1,4 @@
 import Styled from 'styled-components';
-import { color } from "../../utils";
 
 export const Home = Styled.div`
     height: 100%;
@@ -7,6 +6,6 @@ export const Home = Styled.div`
 `;
 
 export const RestaurantList = Styled.div`
-    width: 40vw;
+    width: 30vw;
     margin: 2vh auto;
 `;
