@@ -14,10 +14,10 @@ const compareTags = (tag1, tag2, asc) => {
     else if (!!tag1.length && !tag2.length)
         return -1 * asc;
     else {
-        if (`${tag1[0] + tag1[1]}` < `${tag2[0] + tag2[1]}`) {
+        if (tag1.join(' ') < tag2.join(' ')) {
             return -1 * asc;
         }
-        else if (`${tag1[0] + tag1[1]}` > `${tag2[0] + tag2[1]}`) {
+        else if (tag1.join(' ') > tag2.join(' ')) {
             return 1 * asc;
         }
     }

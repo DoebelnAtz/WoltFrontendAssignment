@@ -18,7 +18,7 @@ const SortDropDown = ({sortField, setSortField, asc, setAsc}) => {
         <SortButton ref={dropDown}>
             <CurrentSelected focus={focus} onClick={() => {setFocus(true)}}>
                 Sort by: {capitalizeFirst(sortField)}
-                <button onClick={() => setAsc(asc * -1)}>{asc < 0 ? '↓' : '↑'}</button>
+                <button onClick={() => {setAsc(asc * -1);}}>{asc < 0 ? '↓' : '↑'}</button>
             </CurrentSelected>
             <DropDown   focus={focus}>
                 <SortOption onClick={() => {setSortField('name'); setFocus(false);}}>Name</SortOption>
