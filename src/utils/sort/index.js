@@ -1,24 +1,24 @@
-const compare = (num1, num2) => {
+const compare = (num1, num2, asc) => {
     if (num1 < num2) {
-        return -1;
+        return -1 * asc;
     }
     else if (num1 > num2) {
-        return 1;
+        return 1 * asc;
     }
     return 0;
 };
 
-const compareTags = (tag1, tag2) => {
+const compareTags = (tag1, tag2, asc) => {
     if(!tag1.length && !!tag2.length)
-        return 1;
+        return 1 * asc;
     else if (!!tag1.length && !tag2.length)
-        return -1;
+        return -1 * asc;
     else {
         if (`${tag1[0] + tag1[1]}` < `${tag2[0] + tag2[1]}`) {
-            return -1;
+            return -1 * asc;
         }
         else if (`${tag1[0] + tag1[1]}` > `${tag2[0] + tag2[1]}`) {
-            return 1;
+            return 1 * asc;
         }
     }
     return (0);
@@ -69,14 +69,17 @@ const quickSort = (comparisonFunc, arr, start=0, end=arr.length - 1, field) => {
     return arr;
 };
 
-const stagingFunc = (arr, field) => {
+const stagingFunc = (arr, field, asc) => {
+
+    // asc is a value 1 / -1 used in the comparison func to switch between asc and desc order
+
     switch (field) {
         case ('tags'):
-            return(quickSort(compareTags, arr, 0, arr.length - 1, field));
+            return(quickSort((...args) => compareTags(...args, asc), arr, 0, arr.length - 1, field));
         case('description'):
-            return(quickSort(compare, arr, 0, arr.length - 1, field));
+            return(quickSort((...args) => compare(...args, asc), arr, 0, arr.length - 1, field));
         default:
-            return(quickSort(compare, arr, 0, arr.length-1, field))
+            return(quickSort((...args) => compare(...args, asc), arr, 0, arr.length-1, field))
     }
 };
 

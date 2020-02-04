@@ -20,8 +20,6 @@ function RestaurantPage(props) {
         <Outside>
             <RestaurantModal ref={modal}>
                 <Image src={restaurant.image} alt={`${isLoading ? 'restaurant' : restaurant.name}_image`}/>
-
-
                 {!isLoading &&
                 <RestaurantTitle>{restaurant.name}</RestaurantTitle>
                 }

@@ -9,10 +9,11 @@ import SortDropDown from "../Components/SortButton";
 function HomePage() {
     const [restaurants, setRestaurants, isLoading] = useRequest('/');
     const [sortField, setSortField] = useState('name');
+    const [asc, setAsc] = useState(1);
 
     useEffect(() => {
-        !isLoading && setRestaurants(sort([...restaurants], sortField)); // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isLoading, sortField]);
+        !isLoading && setRestaurants(sort([...restaurants], sortField, asc)); // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [isLoading, sortField, asc]);
 
     const renderRestaurants = () => {
         return (
@@ -24,11 +25,9 @@ function HomePage() {
         )
     };
 
-
-
     return (
         <Home>
-            <SortDropDown sortField={sortField} setSortField={setSortField}/>
+            <SortDropDown sortField={sortField} setSortField={setSortField} asc={asc} setAsc={setAsc}/>
             <RestaurantList>
                 {!isLoading && renderRestaurants()}
             </RestaurantList>

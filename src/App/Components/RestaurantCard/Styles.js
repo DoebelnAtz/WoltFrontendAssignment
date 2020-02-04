@@ -34,6 +34,7 @@ export const RestaurantDescription = Styled.div`
     font-size: 2vw;
     padding: 10px;
     ${font.default};
+    
 `;
 
 export const Tag = Styled.div`

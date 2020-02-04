@@ -6,14 +6,18 @@ export const CurrentSelected = Styled.div`
     padding: 4px 8px;
     border-radius: 4px 4px ${props => props.focus ? '0 0' : '4px 4px'};
     ${cursor.clickable};
+    ${layout.row}
     background-color: ${color.primary};
+    & button {
+        margin-left: auto;
+    }
 `;
 
 export const SortButton = Styled.div`
     position: absolute;
     padding: 0px 4px;
     
-    width: 200px;
+    width: 220px;
     ${font.default};
     color: #fff;
     max-width: 24vw;

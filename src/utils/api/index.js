@@ -8,7 +8,7 @@ const getByName = async (name) => {
 
 const makeRequest = async (url) => {
 
-    await sleep(200); // simulating a request
+    await sleep(0); // adjust to simulate request
     switch (url) {
         case('/'):
             return data;
