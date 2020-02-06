@@ -9,7 +9,7 @@ function RestaurantPage(props) {
 
     const modal = useRef();
 
-    const [restaurant, setRestaurant, isLoading] = useRequest(props.match.params.restaurantName);
+    const [restaurant, , isLoading] = useRequest(props.match.params.restaurantName);
     const close = () => {
         props.history.push('/')
     };
@@ -19,9 +19,9 @@ function RestaurantPage(props) {
     return ReactDOM.createPortal(
         <Outside>
             <RestaurantModal ref={modal}>
-                <Image src={restaurant.image} alt={`${isLoading ? 'restaurant' : restaurant.name}_image`}/>
+                <Image src={restaurant?.image} alt={`${isLoading ? 'restaurant' : restaurant?.name}_image`}/>
                 {!isLoading &&
-                <RestaurantTitle>{restaurant.name}</RestaurantTitle>
+                <RestaurantTitle>{restaurant?.name}</RestaurantTitle>
                 }
             </RestaurantModal>
         </Outside>,

@@ -12,7 +12,7 @@ function HomePage() {
     const [asc, setAsc] = useState(1);
 
     useEffect(() => {
-        !isLoading && setRestaurants(sort([...restaurants], sortField, asc)); // eslint-disable-next-line react-hooks/exhaustive-deps
+        !isLoading && setRestaurants(sort([...restaurants], sortField, asc));
     }, [isLoading, sortField, asc]);
 
     const renderRestaurants = () => {

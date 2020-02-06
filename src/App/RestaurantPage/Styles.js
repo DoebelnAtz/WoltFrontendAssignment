@@ -18,7 +18,6 @@ export const RestaurantModal = Styled.div`
     left: 20%;
     right: 20%;
     top: 25%;
-    bottom: 25%;
     border: 3px solid ${color.siteBG1};
     background-color: ${color.siteBG};
     border-radius: 4px;
@@ -27,5 +26,6 @@ export const RestaurantModal = Styled.div`
 
 export const RestaurantTitle = Styled.div`
     color: ${color.primary};
+    padding: 10px;
     ${font.title};    
 `;

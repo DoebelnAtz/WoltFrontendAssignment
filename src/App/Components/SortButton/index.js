@@ -25,7 +25,6 @@ const SortDropDown = ({sortField, setSortField, asc, setAsc}) => {
                 <SortOption onClick={() => {setSortField('tags'); setFocus(false);}}>Tags</SortOption>
                 <SortOption onClick={() => {setSortField('description'); setFocus(false);}}>Description</SortOption>
             </DropDown>
-
         </SortButton>
     )
 };
