@@ -1,12 +1,14 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+
 import  makeRequest  from '../utils/api'
 
 
 export const useDismiss = (refInside, close) => {
 
     const handleEsc = (e) => {
+
         if (e.keyCode !== 27)
-            return;
+            return ;
         else
             close();
     };
@@ -14,7 +16,7 @@ export const useDismiss = (refInside, close) => {
     const handleClick = (e) => {
 
         if (refInside.current?.contains(e.target))
-            return;
+            return ;
         else
             close();
     };
@@ -29,6 +31,7 @@ export const useDismiss = (refInside, close) => {
 };
 
 export const useRequest = (url) => {
+
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 

@@ -1,4 +1,5 @@
 import React, {useRef, useState} from 'react';
+
 import {CurrentSelected, DropDown, SortButton, SortOption} from "./Styles";
 import {useDismiss} from "../../../Hooks";
 import { capitalizeFirst } from "../../../utils/helpers";
@@ -8,6 +9,7 @@ const SortDropDown = ({sortField, setSortField, asc, setAsc}) => {
     const [focus, setFocus] = useState(false);
 
     const dropDown = useRef();
+
     const close = () => {
         setFocus(false)
     };

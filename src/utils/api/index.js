@@ -1,4 +1,4 @@
-import {sleep} from '../helpers'
+import { sleep } from '../helpers'
 
 const data = require('../restaurants');
 
